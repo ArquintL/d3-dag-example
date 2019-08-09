@@ -10,7 +10,7 @@ export default function() {
     
     const layering = null;
     const decross = null;
-    const columnAssignment = null
+    const columnAssignment = null;
     const coord = null;
     const interLayerSeparation = null;
     const columnWidth = null;
