@@ -8,24 +8,7 @@ const path = require("path");
 module.exports = function() {
     return {
         resolve: {
-            // Add `.ts` as a resolvable extension.
-            extensions: ['.webpack.js', '.web.js', '.ts', '.js']
-        },
-        module: {
-            rules: [
-                {
-                    test: /\.ts$/, 
-                    enforce: "pre",
-                    loader: "tslint-loader"
-                },
-                // all files with a `.ts` extension will be handled by `awesome-typescript-loader`
-                { 
-                    test: /\.ts$/, 
-                    loaders: [
-                        "awesome-typescript-loader"
-                    ]
-                }
-            ]
+            extensions: ['.webpack.js', '.web.js', '.js']
         },
         plugins: [
             // without specifying additional variables, `process.env.NODE_ENV` will be set to development or production depending on webpack mode
@@ -35,6 +18,7 @@ module.exports = function() {
                 { from: "index.html", to: "index.html"}
             ])
         ],
+        entry: "./src/app.js",
         output: {
             path: path.join(__dirname, "dist"),
             filename: "bundle.js"
