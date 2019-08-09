@@ -1,5 +1,4 @@
 let bundleConfig = require("./make-webpack-config")();
-bundleConfig.entry = "./src/app.js";
 bundleConfig.mode = "development";
 bundleConfig.devtool = "inline-source-map";
 bundleConfig.devServer = {
