@@ -24,17 +24,20 @@ export default function() {
             "Longest Path (fast)": d3.layeringLongestPath(),
             "Longest Path Not Top Down (fast)": d3.layeringLongestPath().topDown(false),
             "Coffman Graham (medium)": d3.layeringCoffmanGraham(),
+            "Topological (fast)": d3.layeringTopological()
           }
           
         const decrossings = {
             "Optimal (slow)": d3.decrossOpt(),
             "Two Layer Opt (medium)": d3.decrossTwoLayer().order(d3.twolayerOpt()),
-            "Two Layer (flast)": d3.decrossTwoLayer()
+            "Two Layer (fast)": d3.decrossTwoLayer()
         }
 
         const columnAssignments = {
             "Simple Left": d3.columnSimpleLeft(),
             "Simple Center": d3.columnSimpleCenter(),
+            "Adjacent Left": d3.columnAdjacent(),
+            "Adjacent Center": d3.columnAdjacent().center(true),
             "Complex Left": d3.columnComplex(),
             "Complex Center": d3.columnComplex().center(true),
         }
