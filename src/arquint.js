@@ -11,7 +11,7 @@ export default function() {
     const layering = null;
     const decross = null;
     const columnAssignment = null;
-    const coord = null;
+    const column2Coord = null;
     const interLayerSeparation = null;
     const columnWidth = null;
     const columnSeparation = null;
@@ -42,8 +42,8 @@ export default function() {
             "Complex Center": d3.columnComplex().center(true),
         }
           
-        const coords = {
-            "Coord Rect": d3.coordRect(),
+        const column2Coords = {
+            "Column 2 Coord Rect": d3.column2CoordRect(),
         }
 
         const interLayerSeparations = {
@@ -79,8 +79,8 @@ export default function() {
         if (columnAssignment != null) {
             layout = layout.columnAssignment(columnAssignments[columnAssignment])
         }
-        if (coord != null) {
-            layout = layout.coord(coords[coord])
+        if (column2Coord != null) {
+            layout = layout.column2Coord(column2Coords[column2Coord])
         }
         if (interLayerSeparation != null) {
             layout = layout.interLayerSeparation(interLayerSeparations[interLayerSeparation])
