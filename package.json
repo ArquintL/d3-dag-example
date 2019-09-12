@@ -7,7 +7,7 @@
   "devDependencies": {
     "copy-webpack-plugin": "5.0.4",
     "d3": "5.9.7",
-    "d3-dag": "git://github.com/ArquintL/d3-dag.git",
+    "d3-dag": "0.3.0",
     "webpack": "4.39.1",
     "webpack-cli": "3.3.6",
     "webpack-dev-server": "3.7.2"

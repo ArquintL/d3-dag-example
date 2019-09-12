@@ -18,7 +18,7 @@ export default function() {
 
     const d3 = Object.assign({}, d3_base, d3_dag);   
 
-    function sugiyama(dag) {
+    function arquint(dag) {
         const layerings = {
             "Simplex (slow)": d3.layeringSimplex(),
             "Longest Path (fast)": d3.layeringLongestPath(),
@@ -96,7 +96,7 @@ export default function() {
         draw(dag);
     }
 
-    return sugiyama;
+    return arquint;
 
     function draw(dag) {
         // This code only handles rendering
