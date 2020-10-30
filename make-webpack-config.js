@@ -14,9 +14,11 @@ module.exports = function() {
             // without specifying additional variables, `process.env.NODE_ENV` will be set to development or production depending on webpack mode
             new webpack.DefinePlugin({}),
             // copy index.html to dist folder:
-            new copyWebpackPlugin([
-                { from: "index.html", to: "index.html"}
-            ])
+            new copyWebpackPlugin({
+                patterns: [
+                    { from: "index.html", to: "index.html"}
+                ]
+            })
         ],
         entry: "./src/app.js",
         output: {
